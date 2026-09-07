@@ -5,14 +5,17 @@
 """
 Student Registration Process
 """
+# This file handles Student Registration 
 
 # ====================================
 # Step 1: Student Registration Process 
 # ====================================
 
-#  Initialize the registration counter
+# This global variable generates a  unique registration ID for each student 
+# Initialize the registration counter
 registration_counter = 50000
 
+# This function collects student details and generates a unique registration ID
 def student_registration():
     global registration_counter 
 
@@ -26,6 +29,7 @@ def student_registration():
     registration_counter += 1
     registration_id = registration_counter
 
+    # This returns the collected student details and registration ID
     # Return the  registration details as a tuple
     return registration_date, student_id, student_name, course_name, registration_id
 
