@@ -1,5 +1,6 @@
 # Author : Pawan Kaur
 # Class : Software Development Fundamentals
+# Date : 15-09-2026 
 
 """
 Student Registration Function
@@ -15,7 +16,7 @@ registration_counter = 50000
 def student_registration():
     global registration_counter 
 
-    # Collect student registration details
+    # Get student registration details
     registration_date = input("Enter registration date (YYYY-MM-DD): ")
     student_id = input("Enter student ID: ")
     student_name = input("Enter student name: ")
@@ -32,7 +33,7 @@ def student_registration():
 # Step 2 : Testing the Student Registration Function
 #===================================================
 
-# Call the function to register a student and unpack the returned values
+# Call the function and unpack the returned values
 registration_date, student_id, student_name, course_name, registration_id = student_registration()
 
 
