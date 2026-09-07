@@ -10,9 +10,11 @@ Parking Meter System
 # PART 1: Parking Meter Process
 # ==========================================
 
-# Initialize a global ticket counter
+# This Global variable generates a unique ticket ID for each parking transaction
+# Initialize a global ticket counter 
 ticket_counter = 10000
 
+# This function calculates the parking fee and generates a unique ticket ID
 def parking_meter():
     global ticket_counter
 
@@ -28,7 +30,8 @@ def parking_meter():
     # set the initial rate and cost
     rate = 4
     cost = 0
-
+    
+    # This decision calculates the parking cost based on parking duration
     # Calculate the parking cost using an IF statement
     if park_time > 3:
         cost = rate * 3
@@ -45,8 +48,9 @@ def parking_meter():
 
     # Create a unique ticket ID by incrementing the counter
     ticket_counter += 1
-    ticket_id = ticket_counter    
-
+    ticket_id = ticket_counter 
+    
+    # This returns the calculated parking details and  unique ticket ID
     # Return the parking Details and ticket ID as a tuple
     return park_time, cost, ticket_id
 
