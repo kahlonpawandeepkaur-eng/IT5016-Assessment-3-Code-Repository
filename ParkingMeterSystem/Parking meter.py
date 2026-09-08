@@ -18,7 +18,9 @@ ticket_counter = 10000
 def parking_meter():
     global ticket_counter
 
-
+    # SOFTWARE DESIGN PRINCIPLE: SINGLE RESPONSIBILITY
+    # This function is responsible for calculating the parking cost and creating a ticket ID
+    
     # Display a message  to show the start of the parking meter process
     print("_" * 30)
     print("Kia Ora! This is the Parking meter")
@@ -30,7 +32,10 @@ def parking_meter():
     # set the initial rate and cost
     rate = 4
     cost = 0
-    
+
+    # SOFTWARE DESIGN PRINCIPLE: KISS
+    # A simple IF/ELSE statement is used to make the parking cost calculation easy to follow
+
     # This decision calculates the parking cost based on parking duration
     # Calculate the parking cost using an IF statement
     if park_time > 3:
@@ -46,11 +51,14 @@ def parking_meter():
     else:
         cost = rate * park_time
 
+    # SOFTWARE DESIGN PRINCIPLE: DRY
+    # Variables are used to avoid repeating the same values and calculations
+
     # Create a unique ticket ID by incrementing the counter
     ticket_counter += 1
     ticket_id = ticket_counter 
     
-    # This returns the calculated parking details and  unique ticket ID
+    # This returns the calculated parking details and the unique ticket ID
     # Return the parking Details and ticket ID as a tuple
     return park_time, cost, ticket_id
 
@@ -60,6 +68,9 @@ def parking_meter():
 
 # Call the function and unpack the returned values
 park_time, cost, ticket_id = parking_meter()
+
+# SOFTWARE DESIGN PRINCIPLE: SEPARATION OF CONCERNS
+# The function performs the calculation and the code below prints the result
 
 # 5. Display the calculated parking charges 
 print()
