@@ -19,6 +19,13 @@ registration_counter = 50000
 def student_registration():
     global registration_counter 
 
+    # SOFTWARE DESIGN PRINCIPLE: SINGLE RESPONSIBILITY
+    # This function collects the student details and creates a registration ID
+
+    # SOFTWARE DESIGN PRINCIPLE: KISS
+    # Simple input statements are used to collect student details
+
+    
     # Collect student registration details
     registration_date = input("Enter registration date (YYYY-MM-DD): ")
     student_id = input("Enter student ID: ")
@@ -28,6 +35,12 @@ def student_registration():
     # Generate a unique registration ID by incrementing the counter
     registration_counter += 1
     registration_id = registration_counter
+
+    # SOFTWARE DESIGN PRINCIPLE: CLEAN CODE OVER CLEVER CODE
+    # Clear names and simple code make the program easy to understand
+
+    # SOFTWARE DESIGN PRINCIPLE: DRY
+    # Using variables helps avoid repeating the same values in the code
 
     # This returns the collected student details and registration ID
     # Return the  registration details as a tuple
@@ -39,6 +52,9 @@ def student_registration():
 
 # Call the function and unpack the returned values
 registration_date, student_id, student_name, course_name, registration_id = student_registration()
+
+# SOFTWARE DESIGN PRINCIPLE: SEPARATION OF CONCERNS 
+# The function collects the details and the code below displays them
 
 
 # Display the registered student details
